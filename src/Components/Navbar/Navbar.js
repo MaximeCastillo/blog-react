@@ -11,14 +11,14 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    const changeWidht = () => {
+    const changeWidth = () => {
       setLargeur(window.innerWidth)
     }
 
-    window.addEventListener('resize', changeWidht)
+    window.addEventListener('resize', changeWidth)
 
     return () => {
-      window.removeEventListener('resize', changeWidht)
+      window.removeEventListener('resize', changeWidth)
     }
   }, [])
 
