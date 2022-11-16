@@ -4,6 +4,7 @@ import Card from '../../Components/Card/Card'
 import './Home.css'
 import { getArticles } from "../../redux/articles/articleReducer";
 import { v4 as uuid } from 'uuid'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const { articles } = useSelector(state => ({
@@ -13,7 +14,7 @@ export default function Home() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if(articles.length === 0) {
+    if (articles.length === 0) {
       dispatch(getArticles())
     }
   }, [])
@@ -26,7 +27,15 @@ export default function Home() {
           return (
             <Card key={uuid()}>
               <h2>{article.title}</h2>
-              <a href="#">Lire l'article</a>
+              <Link
+                to={`articles/${article.title.trim().replace(/\s+/g, '-')}`}
+                state={{
+                  title: article.title,
+                  body: article.body
+                }}
+              >
+                Lire l'article
+              </Link>
             </Card>
           )
         })}
