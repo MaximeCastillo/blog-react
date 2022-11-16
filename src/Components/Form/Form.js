@@ -12,6 +12,16 @@ export default function Form() {
 
   const handleForm = e => {
     e.preventDefault()
+
+    dispatch({
+      type: 'ADDARTICLE',
+      payload: article
+    })
+
+    setArticle({
+      title: "",
+      body: ""
+    })
   }
 
   const handleInputs = e => {

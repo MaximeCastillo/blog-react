@@ -6,8 +6,14 @@ function articleReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'LOADARTICLES':
       return {
-        ...state,
         articles: action.payload
+      }
+
+    case 'ADDARTICLE':
+      const newArr = [...state.articles]
+      newArr.unshift(action.payload)
+      return {
+        articles: newArr
       }
   }
 
