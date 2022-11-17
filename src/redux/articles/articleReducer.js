@@ -15,9 +15,10 @@ function articleReducer(state = INITIAL_STATE, action) {
       return {
         articles: newArr
       }
+      
+    default:
+      return state
   }
-
-  return state;
 }
 
 export default articleReducer;

@@ -17,7 +17,7 @@ export default function Home() {
     if (articles.length === 0) {
       dispatch(getArticles())
     }
-  }, [])
+  })
 
   return (
     <>
