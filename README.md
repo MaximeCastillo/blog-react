@@ -1,6 +1,6 @@
 # Blog React
 
-[React Blog](https://maximecastillo.github.io/blog-react-built/) est une application React de démonstration utilisant les Hooks, React Router v6 et Redux avec un middleware (Thunk).
+[Blog React](https://maximecastillo.github.io/blog-react-built/) est une application React de démonstration utilisant les Hooks, React Router v6 et Redux avec un middleware (Thunk).
 C'est un blog fake avec une page permettant d'écrire un article qui sera accessible depuis la Home.
 
 ## Versions
